@@ -1,0 +1,139 @@
+@import "@fontsource-variable/fraunces";
+@import "@fontsource/plus-jakarta-sans/300.css";
+@import "@fontsource/plus-jakarta-sans/400.css";
+@import "@fontsource/plus-jakarta-sans/500.css";
+@import "@fontsource/plus-jakarta-sans/600.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.375rem;
+
+    /* Vipul Express — Warm White / Charcoal / Gold design system */
+    --background: 0.97 0.01 80;
+    --foreground: 0.18 0.01 260;
+
+    --card: 0.95 0.01 80;
+    --card-foreground: 0.18 0.01 260;
+
+    --popover: 0.97 0.01 80;
+    --popover-foreground: 0.18 0.01 260;
+
+    /* Gold accent as primary */
+    --primary: 0.72 0.12 75;
+    --primary-foreground: 0.18 0.01 260;
+
+    /* Muted slate/beige as secondary */
+    --secondary: 0.88 0.02 80;
+    --secondary-foreground: 0.18 0.01 260;
+
+    --muted: 0.92 0.015 80;
+    --muted-foreground: 0.45 0.01 260;
+
+    --accent: 0.88 0.02 80;
+    --accent-foreground: 0.18 0.01 260;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.90 0.015 80;
+    --input: 0.90 0.015 80;
+    --ring: 0.72 0.12 75;
+
+    /* Brand-specific extras */
+    --gold: 0.72 0.12 75;
+    --gold-light: 0.88 0.08 75;
+    --charcoal: 0.18 0.01 260;
+    --charcoal-muted: 0.35 0.01 260;
+    --warm-white: 0.97 0.01 80;
+    --warm-cream: 0.95 0.01 80;
+    --warm-border: 0.90 0.015 80;
+
+    /* Footer dark */
+    --footer-bg: 0.16 0.01 260;
+    --footer-fg: 0.95 0.01 80;
+
+    --chart-1: 0.72 0.12 75;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.97 0.01 80;
+    --sidebar-foreground: 0.18 0.01 260;
+    --sidebar-primary: 0.72 0.12 75;
+    --sidebar-primary-foreground: 0.18 0.01 260;
+    --sidebar-accent: 0.88 0.02 80;
+    --sidebar-accent-foreground: 0.18 0.01 260;
+    --sidebar-border: 0.90 0.015 80;
+    --sidebar-ring: 0.72 0.12 75;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .font-fraunces {
+    font-family: "Fraunces Variable", "Fraunces", Georgia, serif;
+  }
+
+  .text-gold {
+    color: oklch(var(--gold));
+  }
+
+  .bg-gold {
+    background-color: oklch(var(--gold));
+  }
+
+  .border-gold {
+    border-color: oklch(var(--gold));
+  }
+
+  .bg-charcoal {
+    background-color: oklch(var(--charcoal));
+  }
+
+  .text-charcoal {
+    color: oklch(var(--charcoal));
+  }
+
+  .bg-warm-cream {
+    background-color: oklch(var(--warm-cream));
+  }
+
+  .bg-warm-white {
+    background-color: oklch(var(--warm-white));
+  }
+
+  .text-charcoal-muted {
+    color: oklch(var(--charcoal-muted));
+  }
+
+  .bg-footer {
+    background-color: oklch(var(--footer-bg));
+  }
+
+  .text-footer {
+    color: oklch(var(--footer-fg));
+  }
+
+  .divide-gold {
+    border-color: oklch(var(--gold));
+  }
+}
