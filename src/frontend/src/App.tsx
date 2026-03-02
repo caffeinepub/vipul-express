@@ -171,17 +171,17 @@ function Hero() {
       id="hero"
       className="relative min-h-[90vh] flex items-center overflow-hidden bg-background pt-16"
     >
-      {/* Right side image — full bleed on mobile, half on desktop */}
-      <div className="absolute inset-0 md:left-1/2">
+      {/* Background image — full bleed */}
+      <div className="absolute inset-0">
         <img
-          src="/assets/generated/hero-flatlay.dim_1400x800.jpg"
-          alt="Premium beauty and lifestyle products"
-          className="w-full h-full object-cover"
+          src="/assets/uploads/IMG_0039-1.jpeg"
+          alt="Vipul Shopping Centre storefront"
+          className="w-full h-full object-cover object-center"
           loading="eager"
         />
-        {/* Gradient overlay: strong on mobile (covers text area), fades on desktop */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/20 md:from-background md:via-background/0 md:to-transparent" />
-        <div className="absolute inset-0 md:hidden bg-gradient-to-b from-background/30 via-transparent to-background/60" />
+        {/* Strong overlay to keep text legible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-background/30" />
       </div>
 
       {/* Content */}
